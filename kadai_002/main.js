@@ -97,19 +97,19 @@ const rankCheck = score => {
 const gameOver = id => {
   clearInterval(id);
 
- 
   untypedfield.textContent = 'タイムアップ！';
   let result; // resultの宣言を外に移動
 
   setTimeout(() => {
   console.log('ゲーム終了!');
   const result = confirm(rankCheck(score));
-},200)
-
-     // OKボタンをクリックされたらリロードする
-     if(result == true) {
-        window.location.reload();
-      }
+ 
+  // OKボタンをクリックされたらリロードする
+  if(result == true) {
+    window.location.reload();
+  }
+  },200);
+    
 };
 
 // カウントダウンタイマー
